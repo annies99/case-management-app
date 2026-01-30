@@ -1,0 +1,273 @@
+{
+  "welcome_title": "Welcome",
+  "welcome_description": " V 1.4.3",
+
+  "login": {
+    "title": "Log In",
+    "heading": "Welcome",
+    "body": "Please log in to continue.",
+    "email_or_phone": "Email or Mobile*",
+    "email_or_phone_placeholder": "example@example.com or 987-654-3242",
+    "password_label": "Password*",
+    "password_placeholder": "••••••••",
+    "forgot_password": "Forgot Password?",
+    "login_button": "Log In",
+    "no_account": "Don’t have an account?",
+    "sign_up": "Sign Up",
+    "error_invalid_credentials": "This password is not correct. Please try again.",
+    "error_user_not_found": "This account does not exist.",
+    "error_network": "Unable to reach the server. Please check your connection and try again.",
+    "error_server": "An unexpected server error occurred. Please try again later.",
+    "error_unknown": "Login failed. Please try again."
+  },
+
+  "forgot_password": {
+    "title": "Reset Password",
+    "body": "Enter your phone number to receive a one-time code.",
+    "phone_label": "Phone Number*",
+    "send_code": "Send Code",
+    "code_body": "Enter the code you received.",
+    "otp_label": "Code*",
+    "next_button": "Next",
+    "password_body": "Enter your new password.",
+    "new_password_label": "New Password*",
+    "confirm_password_label": "Confirm New Password*",
+    "reset_button": "Reset Password",
+    "code_sent": "A code has been sent to your phone.",
+    "reset_success": "Your password has been reset.",
+    "otp_required": "Please enter the code you received.",
+    "error": "Request failed. Please try again.",
+    "no_code": "Didn't get it?",
+    "resend": "Resend"
+  },
+
+  "signup": "Sign Up",
+  "user_registration": "User Registration",
+
+  "first_name": "First Name*",
+  "first_name_placeholder": "John",
+  "last_name": "Last Name*",
+  "last_name_placeholder": "Doe",
+  "email_or_mobile": "Email or Mobile*",
+  "email_or_mobile_placeholder": "example@example.com or 987-654-3242",
+  "password": "Password*",
+  "password_placeholder": "Abcd1234$",
+  "confirm_password": "Confirm Password*",
+  "already_have_account": "Already have an account?",
+
+  "invalid_password_title": "Invalid Password",
+  "invalid_password_message": "Password must be 8–20 characters and include:\n • at least one uppercase letter\n • at least one lowercase letter\n • at least one number\n • at least one symbol (!@#$…)",
+  "passwords_do_not_match": "Passwords do not match",
+  "signup_failed_title": "Signup failed",
+  "signup_failed_message": "Please try again.",
+
+  "registration": {
+    "salutation": "Salutation*",
+    "salutation_option_mr": "Mr",
+    "salutation_option_mrs": "Mrs",
+    "salutation_option_ms": "Ms",
+    "salutation_option_dr": "Dr",
+    "firstName": "First Name*",
+    "lastName": "Last Name*",
+    "dob": "Date of Birth*",
+    "dob_placeholder": "MM/DD/YYYY",
+    "address": "Address*",
+    "gender": "Gender*",
+    "gender_option_male": "Male",
+    "gender_option_female": "Female",
+    "gender_option_other": "Other",
+    "mobile": "Mobile Phone*",
+    "email": "Email*",
+    "acceptTerms": "I accept the Terms & Conditions",
+    "notifyConsent": "I agree to receive notifications",
+    "submit": "Submit Registration"
+  },
+
+  "patient_info": {
+    "title": "Patient Registration",
+    "salutation": "Salutation*",
+    "first_name": "First Name*",
+    "first_name_placeholder": "John",
+    "last_name": "Last Name*",
+    "last_name_placeholder": "Doe",
+    "middle_name": "Middle Name",
+    "middle_name_placeholder": "J",
+    "gender": "Gender*",
+    "address": "Address*",
+    "address_placeholder": "123 Main St",
+    "address2": "Address 2",
+    "address2_placeholder": "Apt 101",
+    "city": "City*",
+    "city_placeholder": "Chicago",
+    "state": "State*",
+    "state_placeholder": "IL",
+    "zip": "ZIP Code*",
+    "zip_placeholder": "60603",
+    "dob": "Date of Birth*",
+    "dob_placeholder": "Tap to select date",
+    "phone_number": "Cell Phone Number*",
+    "phone_number_placeholder": "630-219-1919",
+    "daytime_phone": "Daytime Phone Number",
+    "daytime_phone_placeholder": "630-219-1234",
+    "complete_registration": "Complete Registration",
+    "agent": "Agent*",
+    "select_agent": "Select Agent",
+    "hospital": "Hospital*",
+    "select_hospital": "Select Hospital"
+  },
+
+  "settings": {
+    "title": "Settings",
+    "general_notification": "General Notification",
+    "password_manager": "Password Manager"
+  },
+
+  "password_manager": {
+    "title": "Password Manager",
+    "current_password": "Current Password",
+    "new_password": "New Password",
+    "confirm_new_password": "Confirm New Password",
+    "forgot_password": "Forgot Password?",
+    "change_password": "Change Password",
+    "password_changed_success": "Your password has been changed successfully",
+    "password_length_error": "Password must be 6-20 characters"
+  },
+
+  "reminder_frequency": {
+    "5m":  "5 minutes before",
+    "15m": "15 minutes before",
+    "30m": "30 minutes before",
+    "1h":  "1 hour before",
+    "6h":  "6 hours before",
+    "24h": "1 day before",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "save": "Save"
+  },
+
+  "notification": {
+    "title": "Notifications",
+    "news_toggle": "News •",
+    "today": "Today",
+    "scheduled_appointment": "Scheduled Appointment",
+    "appointment_set": "Your appointment is set.",
+    "appointment_details": "Your appointment is at {{time}} on {{date}}.",
+    "medical_notes": "Medical Notes",
+    "notes_added": "New notes added."
+  },
+
+    "initial_consultation": {
+      "title": "Initial Consultation",
+      "location": "Location*",
+      "provider": "Choose Your Provider*",
+      "select_date": "Select Date*",
+      "select_time": "Select Time*",
+      "confirm_proceed": "Confirm & Proceed",
+      "select_location": "Select Location",
+      "select_provider": "Select Provider",
+      "error_locations": "Unable to load locations. Please try again.",
+      "error_slots": "Unable to load appointment availability. Please try again.",
+      "error_past_datetime": "Please select a future date and time.",
+      "no_slots": "No available appointments.",
+      "date": "Date",
+      "from_date": "From date",
+      "to_date": "To date",
+      "select_date_range_prompt": "Choose a date range to view available appointments.",
+      "search": "Search",
+      "confirm": "Confirm"
+    },
+
+  "confirm_appt": {
+    "title": "Confirm Appointment",
+    "booking_for": "Booking For",
+    "patient_name": "Patient Name",
+    "age_unit": "yrs",
+    "problem": "Problem",
+    "confirm_button": "Confirm Appointment"
+  },
+
+  "booking": {
+    "title": "Book Appointment",
+    "select_date_time": "Select Date & Time",
+    "load_slots": "Load Available Slots"
+  },
+
+  "appointment_list": {
+    "your_appointments": "Your Appointments",
+    "no_upcoming": "No upcoming appointments."
+  },
+
+  "appointments": {
+    "title": "Appointments",
+    "tab_complete": "Complete",
+    "tab_upcoming": "Upcoming",
+    "tab_cancelled": "Cancelled",
+    "rebook": "Re-Book",
+    "add_review": "Add Review",
+    "details": "Details"
+  },
+
+  "team": {
+    "title": "Meet Your Team"
+  },
+
+  "profile": {
+    "title": "My Profile",
+    "full_name": "Full Name",
+    "phone_number": "Phone Number",
+    "email": "Email",
+    "dob": "Date of Birth",
+    "dob_placeholder": "Select Date of Birth",
+    "update_button": "Update Profile"
+  },
+
+  "privacy": {
+    "title": "Privacy Policy",
+    "last_updated": "Last Updated: {{date}}",
+    "intro": "Welcome to our app. We respect your privacy and are committed to protecting your personal data. This policy describes how we collect, use, and share information when you use our services.",
+    "section1_title": "1. Information We Collect",
+    "section1_text": "We collect information you provide directly, such as your name, email, and phone number, and data generated by your activity in the app.",
+    "section2_title": "2. How We Use Information",
+    "section2_text": "We use your data to personalize your experience, process transactions, and send notifications.",
+    "section3_title": "3. Sharing & Security",
+    "section3_text": "We do not share your personal data with third parties except as required by law. We implement reasonable security measures to protect your information.",
+    "section4_title": "4. Your Choices",
+    "section4_text": "You can access and update your profile information at any time. You may also opt out of notifications."
+  },
+
+  "contact_us": {
+    "title": "Contact Us",
+    "heading": "We'd love to hear from you",
+    "address_line1": "244 E Roosevelt Rd",
+    "address_line2": "Lombard, IL 60418",
+    "phone_label": "Phone",
+    "phone_value": "866 572 1447",
+    "website_label": "Website",
+    "website_value": "www.injurycare.team"
+  },
+
+  "logout": "Log Out",
+  "logout_confirm_title": "Confirm Logout",
+  "logout_confirm_message": "Are you sure you want to log out?",
+  "confirm": "Confirm",
+  "cancel": "Cancel",
+  "error": "Error",
+  "error_first_name_required": "Please enter your first name.",
+  "error_last_name_required": "Please enter your last name.",
+  "error_phone_required": "Please enter your phone number.",
+  "error_password_required": "Please enter a password.",
+  "error_confirm_password_required": "Please confirm your password.",
+  "patient_info.error_dob_required": "Please input your date of birth.",
+  "patient_info.error_salutation_required": "Please select a salutation.",
+  "patient_info.error_gender_required": "Please select your gender.",
+  "patient_info.error_address_required": "Please enter your address.",
+  "patient_info.error_city_required": "Please enter your city.",
+  "patient_info.error_state_required": "Please select your state.",
+  "patient_info.error_zip_required": "Please enter your ZIP code.",
+  "patient_info.error_agent_required": "Please select an agent.",
+  "patient_info.error_hospital_required": "Please select a hospital.",
+  "patient_info.error_phone_required": "Please enter your phone number.",
+  "patient_info.error_first_name_required": "Please enter your first name.",
+  "patient_info.error_last_name_required": "Please enter your last name."
+}

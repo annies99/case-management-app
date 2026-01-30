@@ -1,0 +1,262 @@
+{
+  "welcome_title": "Witamy",
+  "welcome_description": " V 1.4.3",
+
+  "login": {
+    "title": "Zaloguj się",
+    "heading": "Witamy",
+    "body": "Zaloguj się, aby kontynuować.",
+    "email_or_phone": "E-mail lub telefon*",
+    "email_or_phone_placeholder": "przyklad@przyklad.com lub 987-654-3242",
+    "password_label": "Hasło*",
+    "password_placeholder": "••••••••",
+    "forgot_password": "Nie pamiętasz hasła?",
+    "login_button": "Zaloguj się",
+    "no_account": "Nie masz konta?",
+    "sign_up": "Zarejestruj się",
+    "error_invalid_credentials": "Hasło jest nieprawidłowe. Spróbuj ponownie.",
+    "error_user_not_found": "To konto nie istnieje.",
+    "error_network": "Nie można połączyć się z serwerem. Sprawdź połączenie i spróbuj ponownie.",
+    "error_server": "Wystąpił błąd serwera. Spróbuj ponownie później.",
+    "error_unknown": "Logowanie nie powiodło się. Spróbuj ponownie."
+  },
+
+  "forgot_password": {
+    "title": "Resetuj hasło",
+    "body": "Wprowadź numer telefonu, aby otrzymać jednorazowy kod.",
+    "phone_label": "Numer telefonu*",
+    "send_code": "Wyślij kod",
+    "code_body": "Wpisz otrzymany kod.",
+    "otp_label": "Kod*",
+    "next_button": "Dalej",
+    "password_body": "Wpisz nowe hasło.",
+    "new_password_label": "Nowe hasło*",
+    "confirm_password_label": "Potwierdź nowe hasło*",
+    "reset_button": "Resetuj hasło",
+    "code_sent": "Kod został wysłany na Twój telefon.",
+    "reset_success": "Hasło zostało zresetowane.",
+    "otp_required": "Podaj otrzymany kod.",
+    "error": "Żądanie nie powiodło się. Spróbuj ponownie.",
+    "no_code": "Nie otrzymałeś kodu?",
+    "resend": "Wyślij ponownie"
+  },
+
+  "signup": "Zarejestruj się",
+  "user_registration": "Rejestracja użytkownika",
+
+  "first_name": "Imię*",
+  "first_name_placeholder": "John",
+  "last_name": "Nazwisko*",
+  "last_name_placeholder": "Doe",
+  "email_or_mobile": "E-mail lub telefon*",
+  "email_or_mobile_placeholder": "przyklad@przyklad.com lub 987-654-3242",
+  "password": "Hasło*",
+  "password_placeholder": "Abcd1234$",
+  "confirm_password": "Potwierdź hasło*",
+  "already_have_account": "Masz już konto?",
+
+  "invalid_password_title": "Nieprawidłowe hasło",
+  "invalid_password_message": "Hasło musi mieć od 8 do 20 znaków i zawierać:\n • co najmniej jedną wielką literę\n • co najmniej jedną małą literę\n • co najmniej jedną cyfrę\n • co najmniej jeden symbol (!@#$…)",
+  "passwords_do_not_match": "Hasła nie są zgodne",
+  "signup_failed_title": "Rejestracja nie powiodła się",
+  "signup_failed_message": "Spróbuj ponownie.",
+
+  "registration": {
+    "salutation": "Forma zwracania się*",
+    "salutation_option_mr": "Pan",
+    "salutation_option_mrs": "Pani",
+    "salutation_option_ms": "Pani",
+    "salutation_option_dr": "Dr",
+    "firstName": "Imię*",
+    "lastName": "Nazwisko*",
+    "dob": "Data urodzenia*",
+    "dob_placeholder": "MM/DD/YYYY",
+    "address": "Adres*",
+    "gender": "Płeć*",
+    "gender_option_male": "Mężczyzna",
+    "gender_option_female": "Kobieta",
+    "gender_option_other": "Inne",
+    "mobile": "Telefon komórkowy*",
+    "email": "E-mail*",
+    "acceptTerms": "Akceptuję Warunki i Zasady",
+    "notifyConsent": "Zgadzam się na powiadomienia",
+    "submit": "Wyślij rejestrację"
+  },
+
+  "patient_info": {
+    "title": "Rejestracja pacjenta",
+    "salutation": "Forma zwracania się*",
+    "first_name": "Imię*",
+    "first_name_placeholder": "John",
+    "last_name": "Nazwisko*",
+    "last_name_placeholder": "Doe",
+    "middle_name": "Drugie imię",
+    "middle_name_placeholder": "J",
+    "gender": "Płeć*",
+    "address": "Adres*",
+    "address_placeholder": "123 Main St",
+    "address2": "Adres 2",
+    "address2_placeholder": "Apt 101",
+    "city": "Miasto*",
+    "city_placeholder": "Chicago",
+    "state": "Stan*",
+    "state_placeholder": "IL",
+    "zip": "Kod pocztowy*",
+    "zip_placeholder": "60603",
+    "dob": "Data urodzenia*",
+    "dob_placeholder": "Dotknij, aby wybrać datę",
+    "phone_number": "Telefon komórkowy*",
+    "phone_number_placeholder": "630-219-1919",
+    "daytime_phone": "Telefon dzienny",
+    "daytime_phone_placeholder": "630-219-1234",
+    "complete_registration": "Zakończ rejestrację",
+    "agent": "Agent*",
+    "select_agent": "Wybierz agenta",
+    "hospital": "Szpital*",
+    "select_hospital": "Wybierz szpital"
+  },
+
+  "settings": {
+    "title": "Ustawienia",
+    "general_notification": "Ogólne powiadomienia",
+    "password_manager": "Menedżer haseł"
+  },
+
+  "password_manager": {
+    "title": "Menedżer haseł",
+    "current_password": "Aktualne hasło",
+    "new_password": "Nowe hasło",
+    "confirm_new_password": "Potwierdź nowe hasło",
+    "forgot_password": "Nie pamiętasz hasła?",
+    "change_password": "Zmień hasło",
+    "password_changed_success": "Hasło zostało pomyślnie zmienione",
+    "password_length_error": "Hasło musi mieć od 6 do 20 znaków"
+  },
+
+  "reminder_frequency": {
+    "5m":  "5 minut wcześniej",
+    "15m": "15 minut wcześniej",
+    "30m": "30 minut wcześniej",
+    "1h":  "1 godzinę wcześniej",
+    "6h":  "6 godzin wcześniej",
+    "24h": "1 dzień wcześniej",
+    "days": "Dni",
+    "hours": "Godziny",
+    "minutes": "Minuty",
+    "save": "Zapisz"
+  },
+
+  "notification": {
+    "title": "Powiadomienia",
+    "news_toggle": "Aktualności •",
+    "today": "Dziś",
+    "scheduled_appointment": "Umówiona wizyta",
+    "appointment_set": "Twoja wizyta została umówiona.",
+    "appointment_details": "Twoja wizyta jest o {{time}} dnia {{date}}.",
+    "medical_notes": "Notatki medyczne",
+    "notes_added": "Dodano nowe notatki."
+  },
+
+  "initial_consultation": {
+    "title": "Konsultacja wstępna",
+    "location": "Lokalizacja*",
+    "provider": "Wybierz Swojego Dostawcę*",
+    "select_date": "Wybierz datę*",
+    "select_time": "Wybierz godzinę*",
+    "confirm_proceed": "Potwierdź i kontynuuj",
+    "select_location": "Wybierz lokalizację",
+    "select_provider": "Wybierz dostawcę",
+    "error_locations": "Nie można załadować lokalizacji. Spróbuj ponownie.",
+    "error_slots": "Nie można załadować dostępności wizyt. Spróbuj ponownie.",
+    "error_past_datetime": "Wybierz przyszłą datę i godzinę.",
+    "no_slots": "Brak dostępnych terminów.",
+    "date": "Data",
+    "from_date": "Data początkowa",
+    "to_date": "Data końcowa",
+    "select_date_range_prompt": "Wybierz zakres dat, aby zobaczyć dostępne wizyty.",
+    "search": "Szukaj",
+    "confirm": "Potwierdź"
+  },
+
+  "confirm_appt": {
+    "title": "Potwierdź wizytę",
+    "booking_for": "Rezerwacja dla",
+    "patient_name": "Imię pacjenta",
+    "age_unit": "lata",
+    "problem": "Problem",
+    "confirm_button": "Potwierdź wizytę"
+  },
+
+  "booking": {
+    "title": "Zarezerwuj wizytę",
+    "select_date_time": "Wybierz datę i godzinę",
+    "load_slots": "Pokaż dostępne terminy"
+  },
+
+  "appointment_list": {
+    "your_appointments": "Twoje wizyty",
+    "no_upcoming": "Brak nadchodzących wizyt."
+  },
+
+  "appointments": {
+    "title": "Wizyty",
+    "tab_complete": "Zakończone",
+    "tab_upcoming": "Nadchodzące",
+    "tab_cancelled": "Anulowane",
+    "rebook": "Ponowna rezerwacja",
+    "add_review": "Dodaj opinię",
+    "details": "Szczegóły"
+  },
+
+  "team": {
+    "title": "Poznaj swój zespół"
+  },
+
+  "profile": {
+    "title": "Mój profil",
+    "full_name": "Imię i nazwisko",
+    "phone_number": "Telefon",
+    "email": "E-mail",
+    "dob": "Data urodzenia",
+    "dob_placeholder": "Wybierz datę urodzenia",
+    "update_button": "Aktualizuj profil"
+  },
+
+  "privacy": {
+    "title": "Polityka prywatności",
+    "last_updated": "Ostatnia aktualizacja: {{date}}",
+    "intro": "Witamy w naszej aplikacji. Szanujemy twoją prywatność i zobowiązujemy się chronić twoje dane osobowe. Niniejsza polityka opisuje, jak zbieramy, wykorzystujemy i udostępniamy informacje podczas korzystania z naszych usług.",
+    "section1_title": "1. Informacje, które zbieramy",
+    "section1_text": "Zbieramy informacje, które podajesz bezpośrednio, takie jak imię, e-mail i telefon, oraz dane generowane przez twoją aktywność w aplikacji.",
+    "section2_title": "2. Jak wykorzystujemy informacje",
+    "section2_text": "Wykorzystujemy twoje dane do personalizacji doświadczenia, przetwarzania transakcji i wysyłania powiadomień.",
+    "section3_title": "3. Udostępnianie i bezpieczeństwo",
+    "section3_text": "Nie udostępniamy twoich danych osobowych stronom trzecim, chyba że jest to wymagane prawem. Stosujemy rozsądne środki bezpieczeństwa w celu ochrony twoich danych.",
+    "section4_title": "4. Twoje wybory",
+    "section4_text": "Możesz w każdej chwili uzyskać dostęp i zaktualizować swój profil. Możesz także zrezygnować z powiadomień."
+  },
+
+  "logout": "Wyloguj się",
+  "logout_confirm_title": "Potwierdź wylogowanie",
+  "logout_confirm_message": "Czy na pewno chcesz się wylogować?",
+  "confirm": "Potwierdź",
+  "cancel": "Anuluj",
+  "error": "Błąd",
+  "error_first_name_required": "Podaj imię.",
+  "error_last_name_required": "Podaj nazwisko.",
+  "error_phone_required": "Wprowadź numer telefonu.",
+  "error_password_required": "Podaj hasło.",
+  "error_confirm_password_required": "Potwierdź hasło.",
+  "patient_info.error_dob_required": "Podaj datę urodzenia.",
+  "patient_info.error_salutation_required": "Wybierz formę zwracania się.",
+  "patient_info.error_gender_required": "Wybierz płeć.",
+  "patient_info.error_address_required": "Podaj adres.",
+  "patient_info.error_city_required": "Podaj miasto.",
+  "patient_info.error_state_required": "Wybierz stan.",
+  "patient_info.error_zip_required": "Podaj kod pocztowy.",
+  "patient_info.error_agent_required": "Wybierz agenta.",
+  "patient_info.error_hospital_required": "Wybierz szpital.",
+  "patient_info.error_phone_required": "Wprowadź numer telefonu.",
+  "patient_info.error_first_name_required": "Podaj imię.",
+  "patient_info.error_last_name_required": "Podaj nazwisko."
+}

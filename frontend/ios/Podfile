@@ -1,0 +1,160 @@
+require File.join(File.dirname(`node --print "require.resolve('expo/package.json')"`), "scripts/autolinking")
+require File.join(File.dirname(`node --print "require.resolve('react-native/package.json')"`), "scripts/react_native_pods")
+
+require 'json'
+require 'plist'
+require 'xcodeproj'
+podfile_properties = JSON.parse(File.read(File.join(__dir__, 'Podfile.properties.json'))) rescue {}
+
+def first_present(*values)
+  values.each do |value|
+    next if value.nil?
+
+    string = value.is_a?(String) ? value.strip : value
+    return string unless string.nil? || string == ''
+  end
+
+  nil
+end
+
+def decode_team_identifier_from_profile(profile_path)
+  return nil unless profile_path && File.exist?(profile_path)
+
+  profile_xml = `security cms -D -i "#{profile_path}" 2>/dev/null`
+  return nil if profile_xml.nil? || profile_xml.empty?
+
+  profile = Plist.parse_xml(profile_xml)
+  return nil unless profile
+
+  team_ids = profile['TeamIdentifier']
+  team_ids = [team_ids] if team_ids.is_a?(String)
+  first_present(*Array(team_ids))
+rescue => error
+  Pod::UI.puts "[InjuryCareTeam] Warning: Unable to read provisioning profile at #{profile_path}: #{error.message}".yellow
+  nil
+end
+
+def locate_injury_care_team_project(installer)
+  if installer.respond_to?(:target_for_spec)
+    begin
+      target = installer.target_for_spec('InjuryCareTeam', 'InjuryCareTeam')
+      return target.user_project if target && target.respond_to?(:user_project) && target.user_project
+    rescue => error
+      Pod::UI.puts "[InjuryCareTeam] Warning: Unable to resolve user project from target_for_spec: #{error.message}".yellow
+    end
+  end
+
+  installer.aggregate_targets
+    .map { |aggregate_target| aggregate_target.respond_to?(:user_project) ? aggregate_target.user_project : nil }
+    .compact
+    .find do |project|
+      project.respond_to?(:path) && File.basename(project.path) == 'InjuryCareTeam.xcodeproj'
+    end
+end
+
+ENV['RCT_NEW_ARCH_ENABLED'] ||= '0' if podfile_properties['newArchEnabled'] == 'false'
+ENV['EX_DEV_CLIENT_NETWORK_INSPECTOR'] ||= podfile_properties['EX_DEV_CLIENT_NETWORK_INSPECTOR']
+ENV['RCT_USE_RN_DEP'] ||= '1' if podfile_properties['ios.buildReactNativeFromSource'] != 'true' && podfile_properties['newArchEnabled'] != 'false'
+ENV['RCT_USE_PREBUILT_RNCORE'] ||= '1' if podfile_properties['ios.buildReactNativeFromSource'] != 'true' && podfile_properties['newArchEnabled'] != 'false'
+
+platform :ios, podfile_properties['ios.deploymentTarget'] || '15.1'
+project 'InjuryCareTeam.xcodeproj'
+
+prepare_react_native_project!
+
+target 'InjuryCareTeam' do
+  use_expo_modules!
+  
+  if ENV['EXPO_USE_COMMUNITY_AUTOLINKING'] == '1'
+    config_command = ['node', '-e', "process.argv=['', '', 'config'];require('@react-native-community/cli').run()"];
+  else
+    config_command = [
+      'npx',
+      'expo-modules-autolinking',
+      'react-native-config',
+      '--json',
+      '--platform',
+      'ios'
+    ]
+  end
+  
+  config = use_native_modules!(config_command)
+  
+  use_frameworks! :linkage => podfile_properties['ios.useFrameworks'].to_sym if podfile_properties['ios.useFrameworks']
+  use_frameworks! :linkage => ENV['USE_FRAMEWORKS'].to_sym if ENV['USE_FRAMEWORKS']
+  
+  use_react_native!(
+    :path => config[:reactNativePath],
+    :hermes_enabled => podfile_properties['expo.jsEngine'] == nil || podfile_properties['expo.jsEngine'] == 'hermes',
+    # An absolute path to your application root.
+    :app_path => "#{Pod::Config.instance.installation_root}/..",
+    :privacy_file_aggregation_enabled => podfile_properties['apple.privacyManifestAggregationEnabled'] != 'false',
+  )
+  
+  post_install do |installer|
+    # Disable resource bundle signing as recommended by Expo when building with Xcode 14+
+    # https://expo.fyi/r/disable-bundle-resource-signing
+    installer.pods_project.targets.each do |target|
+      next unless target.respond_to?(:product_type)
+      next unless target.product_type == 'com.apple.product-type.bundle'
+
+      target.build_configurations.each do |config|
+        next unless config.respond_to?(:build_settings)
+
+        build_settings = config.build_settings
+        build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+        build_settings['CODE_SIGNING_REQUIRED'] = 'NO'
+        build_settings['AD_HOC_CODE_SIGNING_ALLOWED'] = 'NO'
+        build_settings['CODE_SIGN_STYLE'] = 'Manual'
+        build_settings['CODE_SIGN_IDENTITY'] = ''
+        build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ''
+        build_settings['DEVELOPMENT_TEAM'] = ''
+        build_settings['PROVISIONING_PROFILE_SPECIFIER'] = ''
+        build_settings['PROVISIONING_PROFILE'] = ''
+      end
+    end
+
+    team_id = first_present(
+      ENV['DEVELOPMENT_TEAM'],
+      ENV['EXPO_APPLE_TEAM_ID'],
+      ENV['APPLE_TEAM_ID'],
+      podfile_properties['ios.developmentTeam'],
+      decode_team_identifier_from_profile(ENV['EXPO_PROVISIONING_PROFILE_PATH'])
+    )
+
+    if team_id
+      Pod::UI.puts "[InjuryCareTeam] Configuring automatic signing with development team #{team_id}."
+      project = locate_injury_care_team_project(installer)
+
+      if project.nil?
+        Pod::UI.puts '[InjuryCareTeam] Warning: Unable to locate InjuryCareTeam.xcodeproj to set the development team.'.yellow
+      else
+        project.targets.each do |target|
+          next unless target.respond_to?(:name) && target.name == 'InjuryCareTeam'
+
+          target.build_configurations.each do |config|
+            next unless config.respond_to?(:build_settings)
+
+            build_settings = config.build_settings
+            build_settings['CODE_SIGN_STYLE'] = 'Automatic'
+            build_settings['DEVELOPMENT_TEAM'] = team_id
+            build_settings.delete('PROVISIONING_PROFILE_SPECIFIER')
+            build_settings.delete('PROVISIONING_PROFILE')
+          end
+        end
+
+        project.save
+      end
+    else
+      Pod::UI.puts "[InjuryCareTeam] Warning: No development team configured for the main target. The EAS build credentials must supply DEVELOPMENT_TEAM/EXPO_APPLE_TEAM_ID.".yellow
+    end
+
+    react_native_post_install(
+      installer,
+      config[:reactNativePath],
+      :mac_catalyst_enabled => false,
+      :ccache_enabled => podfile_properties['apple.ccacheEnabled'] == 'true',
+    )
+  end
+end
+

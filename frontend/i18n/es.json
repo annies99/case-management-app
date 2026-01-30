@@ -1,0 +1,273 @@
+{
+  "welcome_title": "Bienvenido",
+  "welcome_description": " V 1.4.3 ",
+
+  "login": {
+    "title": "Iniciar sesión",
+    "heading": "Bienvenido",
+    "body": "Por favor, inicie sesión para continuar.",
+    "email_or_phone": "Correo o móvil*",
+    "email_or_phone_placeholder": "example@example.com or 987-654-3242",
+    "password_label": "Contraseña*",
+    "password_placeholder": "••••••••",
+    "forgot_password": "¿Olvidó su contraseña?",
+    "login_button": "Iniciar sesión",
+    "no_account": "¿No tienes cuenta?",
+    "sign_up": "Regístrate",
+    "error_invalid_credentials": "La contraseña no es correcta, inténtalo de nuevo.",
+    "error_user_not_found": "Esta cuenta no existe.",
+    "error_network": "No se pudo conectar al servidor. Comprueba tu conexión e inténtalo de nuevo.",
+    "error_server": "Ocurrió un error del servidor. Por favor, inténtalo de nuevo más tarde.",
+    "error_unknown": "Error al iniciar sesión. Por favor, inténtalo de nuevo."
+  },
+
+  "forgot_password": {
+    "title": "Restablecer contraseña",
+    "body": "Ingresa tu número de teléfono para recibir un código de un solo uso.",
+    "phone_label": "Número de teléfono*",
+    "send_code": "Enviar código",
+    "code_body": "Ingresa el código que recibiste.",
+    "otp_label": "Código*",
+    "next_button": "Siguiente",
+    "password_body": "Ingresa tu nueva contraseña.",
+    "new_password_label": "Nueva contraseña*",
+    "confirm_password_label": "Confirmar nueva contraseña*",
+    "reset_button": "Restablecer contraseña",
+    "code_sent": "Se envió un código a tu teléfono.",
+    "reset_success": "Tu contraseña ha sido restablecida.",
+    "otp_required": "Por favor ingresa el código recibido.",
+    "error": "La solicitud falló. Inténtalo de nuevo.",
+    "no_code": "¿No lo recibiste?",
+    "resend": "Reenviar"
+  },
+
+  "signup": "Regístrate",
+  "user_registration": "Registro de usuario",
+
+  "first_name": "Nombre*",
+  "first_name_placeholder": "John",
+  "last_name": "Apellido*",
+  "last_name_placeholder": "Doe",
+  "email_or_mobile": "Correo o móvil*",
+  "email_or_mobile_placeholder": "example@example.com or 987-654-3242",
+  "password": "Contraseña*",
+  "password_placeholder": "Abcd1234$",
+  "confirm_password": "Confirmar contraseña*",
+  "already_have_account": "¿Ya tienes cuenta?",
+
+  "invalid_password_title": "Contraseña inválida",
+  "invalid_password_message": "La contraseña debe tener entre 8 y 20 caracteres e incluir:\n • al menos una letra mayúscula\n • al menos una letra minúscula\n • al menos un número\n • al menos un símbolo (!@#$…)",
+  "passwords_do_not_match": "Las contraseñas no coinciden",
+  "signup_failed_title": "Error de registro",
+  "signup_failed_message": "Por favor, inténtalo de nuevo.",
+
+  "registration": {
+    "salutation": "Tratamiento*",
+    "salutation_option_mr": "Sr.",
+    "salutation_option_mrs": "Sra.",
+    "salutation_option_ms": "Srta.",
+    "salutation_option_dr": "Dr.",
+    "firstName": "Nombre*",
+    "lastName": "Apellido*",
+    "dob": "Fecha de nacimiento*",
+    "dob_placeholder": "MM/DD/YYYY",
+    "address": "Dirección*",
+    "gender": "Género*",
+    "gender_option_male": "Masculino",
+    "gender_option_female": "Femenino",
+    "gender_option_other": "Otro",
+    "mobile": "Teléfono móvil*",
+    "email": "Correo*",
+    "acceptTerms": "Acepto los Términos y Condiciones",
+    "notifyConsent": "Acepto recibir notificaciones",
+    "submit": "Enviar registro"
+  },
+
+  "patient_info": {
+    "title": "Registro de paciente",
+    "salutation": "Tratamiento*",
+    "first_name": "Nombre*",
+    "first_name_placeholder": "John",
+    "last_name": "Apellido*",
+    "last_name_placeholder": "Doe",
+    "middle_name": "Segundo nombre",
+    "middle_name_placeholder": "J",
+    "gender": "Género*",
+    "address": "Dirección*",
+    "address_placeholder": "123 Main St",
+    "address2": "Dirección 2",
+    "address2_placeholder": "Apt 101",
+    "city": "Ciudad*",
+    "city_placeholder": "Chicago",
+    "state": "Estado*",
+    "state_placeholder": "IL",
+    "zip": "Código postal*",
+    "zip_placeholder": "60603",
+    "dob": "Fecha de nacimiento*",
+    "dob_placeholder": "Toca para seleccionar fecha",
+    "phone_number": "Teléfono celular*",
+    "phone_number_placeholder": "630-219-1919",
+    "daytime_phone": "Teléfono diurno",
+    "daytime_phone_placeholder": "630-219-1234",
+    "complete_registration": "Completar registro",
+    "agent": "Agente*",
+    "select_agent": "Seleccionar agente",
+    "hospital": "Hospital*",
+    "select_hospital": "Seleccionar hospital"
+  },
+
+  "settings": {
+    "title": "Configuración",
+    "general_notification": "Notificaciones generales",
+    "password_manager": "Administrador de contraseñas"
+  },
+
+  "password_manager": {
+    "title": "Administrador de contraseñas",
+    "current_password": "Contraseña actual",
+    "new_password": "Nueva contraseña",
+    "confirm_new_password": "Confirmar nueva contraseña",
+    "forgot_password": "¿Olvidó su contraseña?",
+    "change_password": "Cambiar contraseña",
+    "password_changed_success": "Tu contraseña se ha cambiado correctamente",
+    "password_length_error": "La contraseña debe tener entre 6 y 20 caracteres"
+  },
+
+  "reminder_frequency": {
+    "5m":  "5 minutos antes",
+    "15m": "15 minutos antes",
+    "30m": "30 minutos antes",
+    "1h":  "1 hora antes",
+    "6h":  "6 horas antes",
+    "24h": "1 día antes",
+    "days": "Días",
+    "hours": "Horas",
+    "minutes": "Minutos",
+    "save": "Guardar"
+  },
+
+  "notification": {
+    "title": "Notificaciones",
+    "news_toggle": "Noticias •",
+    "today": "Hoy",
+    "scheduled_appointment": "Cita programada",
+    "appointment_set": "Tu cita está programada.",
+    "appointment_details": "Tu cita es a las {{time}} el {{date}}.",
+    "medical_notes": "Notas médicas",
+    "notes_added": "Nuevas notas añadidas."
+  },
+
+  "initial_consultation": {
+    "title": "Consulta inicial",
+    "location": "Ubicación*",
+    "provider": "Seleccione Su Proveedor*",
+    "select_date": "Seleccionar fecha*",
+    "select_time": "Seleccionar hora*",
+    "confirm_proceed": "Confirmar y continuar",
+    "select_location": "Seleccionar ubicación",
+    "select_provider": "Seleccionar proveedor",
+    "error_locations": "No se pudieron cargar las ubicaciones. Inténtalo de nuevo.",
+    "error_slots": "No se pudo cargar la disponibilidad de citas. Inténtalo de nuevo.",
+    "error_past_datetime": "Seleccione una fecha y hora futuras.",
+    "no_slots": "No hay citas disponibles.",
+    "date": "Fecha",
+    "from_date": "Fecha de inicio",
+    "to_date": "Fecha de fin",
+    "select_date_range_prompt": "Elige un rango de fechas para ver las citas disponibles.",
+    "search": "Buscar",
+    "confirm": "Confirmar"
+  },
+
+  "confirm_appt": {
+    "title": "Confirmar cita",
+    "booking_for": "Reserva para",
+    "patient_name": "Nombre del paciente",
+    "age_unit": "años",
+    "problem": "Problema",
+    "confirm_button": "Confirmar cita"
+  },
+
+  "booking": {
+    "title": "Reservar cita",
+    "select_date_time": "Seleccionar fecha y hora",
+    "load_slots": "Mostrar horarios disponibles"
+  },
+
+  "appointment_list": {
+    "your_appointments": "Tus citas",
+    "no_upcoming": "No hay citas próximas."
+  },
+
+  "appointments": {
+    "title": "Citas",
+    "tab_complete": "Completas",
+    "tab_upcoming": "Próximas",
+    "tab_cancelled": "Canceladas",
+    "rebook": "Reprogramar",
+    "add_review": "Añadir reseña",
+    "details": "Detalles"
+  },
+
+  "team": {
+    "title": "Conoce a tu equipo"
+  },
+
+  "profile": {
+    "title": "Mi perfil",
+    "full_name": "Nombre completo",
+    "phone_number": "Teléfono",
+    "email": "Correo",
+    "dob": "Fecha de nacimiento",
+    "dob_placeholder": "Selecciona fecha de nacimiento",
+    "update_button": "Actualizar perfil"
+  },
+
+  "privacy": {
+    "title": "Política de privacidad",
+    "last_updated": "Última actualización: {{date}}",
+    "intro": "Bienvenido a nuestra app. Respetamos tu privacidad y estamos comprometidos a proteger tus datos personales. Esta política describe cómo recopilamos, usamos y compartimos información cuando utilizas nuestros servicios.",
+    "section1_title": "1. Información que recopilamos",
+    "section1_text": "Recopilamos la información que proporcionas directamente, como tu nombre, correo y teléfono, y datos generados por tu actividad en la app.",
+    "section2_title": "2. Cómo usamos la información",
+    "section2_text": "Usamos tus datos para personalizar tu experiencia, procesar transacciones y enviar notificaciones.",
+    "section3_title": "3. Compartir y seguridad",
+    "section3_text": "No compartimos tus datos personales con terceros salvo cuando la ley lo requiera. Implementamos medidas de seguridad razonables para proteger tu información.",
+    "section4_title": "4. Tus opciones",
+    "section4_text": "Puedes acceder y actualizar tu perfil en cualquier momento. También puedes darte de baja de las notificaciones."
+  },
+
+  "contact_us": {
+    "title": "Contáctanos",
+    "heading": "Queremos saber de ti",
+    "address_line1": "244 E Roosevelt Rd",
+    "address_line2": "Lombard, IL 60418",
+    "phone_label": "Teléfono",
+    "phone_value": "866 572 1447",
+    "website_label": "Sitio web",
+    "website_value": "www.injurycare.team"
+  },
+
+  "logout": "Cerrar sesión",
+  "logout_confirm_title": "Confirmar cierre de sesión",
+  "logout_confirm_message": "¿Estás seguro de que quieres cerrar sesión?",
+  "confirm": "Confirmar",
+  "cancel": "Cancelar",
+  "error": "Error",
+  "error_first_name_required": "Por favor, introduce tu nombre.",
+  "error_last_name_required": "Por favor, introduce tu apellido.",
+  "error_phone_required": "Por favor, introduce tu número de teléfono.",
+  "error_password_required": "Por favor, introduce una contraseña.",
+  "error_confirm_password_required": "Por favor, confirma tu contraseña.",
+  "patient_info.error_dob_required": "Por favor, introduce tu fecha de nacimiento.",
+  "patient_info.error_salutation_required": "Por favor, selecciona un tratamiento.",
+  "patient_info.error_gender_required": "Por favor, selecciona tu género.",
+  "patient_info.error_address_required": "Por favor, introduce tu dirección.",
+  "patient_info.error_city_required": "Por favor, introduce tu ciudad.",
+  "patient_info.error_state_required": "Por favor, selecciona tu estado.",
+  "patient_info.error_zip_required": "Por favor, introduce tu código postal.",
+  "patient_info.error_agent_required": "Por favor, selecciona un agente.",
+  "patient_info.error_hospital_required": "Por favor, selecciona un hospital.",
+  "patient_info.error_phone_required": "Por favor, introduce tu número de teléfono.",
+  "patient_info.error_first_name_required": "Por favor, introduce tu nombre.",
+  "patient_info.error_last_name_required": "Por favor, introduce tu apellido."
+}
